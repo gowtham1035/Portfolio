@@ -1,8 +1,5 @@
 # Portfolio
 
-Sure, here's some content you can use for your profile:
-
----
 
 **Welcome to My Portfolio**
 
