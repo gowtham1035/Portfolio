@@ -11,6 +11,22 @@
     </head>
 
     <script>
+            function incrementVisitorCount() {
+        // Get the existing visitor count from localStorage
+        let visitorCount = localStorage.getItem('visitorCount');
+        // Increment the count if it exists, otherwise set it to 1
+        visitorCount = visitorCount ? parseInt(visitorCount) + 1 : 1;
+        // Update the visitor count in localStorage
+        localStorage.setItem('visitorCount', visitorCount);
+        // Display the visitor count on the page
+        document.getElementById('visitorCount').innerText = visitorCount;
+    }
+
+    // Call the function to increment and display visitor count when the page loads
+    window.onload = function() {
+        incrementVisitorCount();
+    };
+        
         function navigateTo(sectionId) {
           var section = document.getElementById(sectionId);
           section.scrollIntoView({ behavior: 'smooth' });
@@ -19,7 +35,10 @@
 
     <body style="background-color: rgb(1, 97, 126); font-family: 'Roboto', sans-serif; overflow-x: hidden;">
 
-
+        <div class="viewer-count">
+    <i class="fas fa-user"></i>
+    <span id="visitorCount"></span>
+</div>
     <p class="starting_para">Welcome To my Portfolio</p>
 
         <nav>
