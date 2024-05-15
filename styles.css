@@ -1,3 +1,21 @@
+.viewer-count {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust background color and opacity as needed */
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for user symbol */
+.viewer-count i {
+    margin-right: 5px;
+}
+
+
+
 @keyframes changeColor {
     0% {
         border-color: #ff4e50; /* Red */
