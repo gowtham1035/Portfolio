@@ -7,7 +7,7 @@ Sure, here's some content you can use for your profile:
 **Welcome to My Portfolio**
 
 ### About Me
-As a dedicated and results-driven software developer, I bring a strong foundation in programming and a passion for creating efficient and scalable solutions. I am well-versed in crafting responsive and visually appealing front-end interfaces using HTML, CSS, and JavaScript with a keen eye for design principles.
+As a dedicated and results-driven software developer, I bring a strong foundation in programming and a passion for creating efficient and scalable solutions. I am well-versed in crafting and visually appealing front-end interfaces using HTML, CSS, and JavaScript with a keen eye for design principles.
 
 Proficient in Python, I leverage its power to build robust and dynamic web applications, often utilizing the Flask framework. This experience allows me to develop scalable solutions while staying current with industry trends and best practices.
 
@@ -35,7 +35,3 @@ I am eager to apply my technical skills and passion for coding to contribute to 
 - **GitHub:** [gowtham1035](https://www.github.com/gowtham1035)
 - **LinkedIn:** [gowtham135](https://www.linkedin.com/in/gowtham135/)
 - **Email:** gowthamneelam1@msitprogram.net
-
----
-
-Feel free to adjust or expand upon any section to better suit your needs!
