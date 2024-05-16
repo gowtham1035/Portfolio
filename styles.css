@@ -32,6 +32,14 @@ body {
   font-size: 1.2em;
 }
 
+.navbar-nav .nav-link i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link i:hover {
+  transform: scale(1.5);
+}
+
 /* Section styles */
 section {
   padding: 50px 0;
