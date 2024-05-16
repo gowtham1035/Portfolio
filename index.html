@@ -1,138 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Profile</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-ukc9i9tvl33e3+8f+vks0ADWEFH1H6eFQjSrnM/y7xPuGJO8LdjF2pRWZmUwEIQExHyeAjsckFmVEMydEwK9Yg==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <title>Profile</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-ukc9i9tvl33e3+8f+vks0ADWEFH1H6eFQjSrnM/y7xPuGJO8LdjF2pRWZmUwEIQExHyeAjsckFmVEMydEwK9Yg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: rgb(1, 97, 126); font-family: 'Roboto', sans-serif; overflow-x: hidden;">
 
-    <script>
-            function incrementVisitorCount() {
-        // Get the existing visitor count from localStorage
-        let visitorCount = localStorage.getItem('visitorCount');
-        // Increment the count if it exists, otherwise set it to 1
-        visitorCount = visitorCount ? parseInt(visitorCount) + 1 : 1;
-        // Update the visitor count in localStorage
-        localStorage.setItem('visitorCount', visitorCount);
-        // Display the visitor count on the page
-        document.getElementById('visitorCount').innerText = visitorCount;
-    }
+<p class="starting_para">Welcome To my Portfolio</p>
 
-    // Call the function to increment and display visitor count when the page loads
-    window.onload = function() {
-        incrementVisitorCount();
-    };
-        
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="navigateTo('about-me')"><i class="fas fa-user"></i></a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="nav-link" href="#" onclick="navigateTo('education')"><i class="fas fa-graduation-cap"></i></a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="nav-link" href="#" onclick="navigateTo('skills')"><i class="fas fa-laptop-code"></i></a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="nav-link" href="#" onclick="navigateTo('contact')"><i class="fas fa-envelope"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
         function navigateTo(sectionId) {
           var section = document.getElementById(sectionId);
           section.scrollIntoView({ behavior: 'smooth' });
         }
-      </script>
+</script>
 
-    <body style="background-color: rgb(1, 97, 126); font-family: 'Roboto', sans-serif; overflow-x: hidden;">
+
+
+<section id="about-me" class="container mt-5">
+    <h1 class="text-center">About me</h1>
+    <p style="text-align: left;">As a dedicated and results-driven software developer, I bring a strong foundation in programming and a passion for creating efficient and scalable solutions. I am well-versed in crafting visually appealing front-end interfaces using HTML, CSS and Javascript with a keen eye for design principles.
         
-    <p class="starting_para">Welcome To my Portfolio</p>
+    Proficient in Python, I leverage its power to build robust and dynamic web applications, often utilizing the Flask framework. This experience allows me to develop scalable solutions while staying current with industry trends and best practices.
+    
+    In addition to my web development skills, and my proficiency in SQL enables me to work with databases effectively.
+    
+    I am enthusiastic about contributing my skills to innovative projects and collaborating with like-minded professionals to push the boundaries of what technology can achieve. My adaptability, attention to detail, and commitment to continuous learning make me a valuable asset to any development team.
+    
+    I am eager to apply my technical skills and passion for coding to contribute to challenging projects and drive success in a dynamic and collaborative environment.
+    </p>
+</section>
 
-        <nav>
-            <div class="parent" onclick="navigateTo('about-me')">
-            <div class="child">
-            <a title="Home" style="font-size: 24px;">
-                <i class="fas fa-home"></i></div>
-            </a></div>
 
-            <div class="parent" onclick="navigateTo('education')">
-                <div class="child">
-            <a title="Education" style="font-size: 24px;">
-                <i class="fas fa-graduation-cap"></i>
-            </a></div></div>
-
-            <div class="parent" onclick="navigateTo('skills')">
-                <div class="child">
-            <a title="Skills" style="font-size: 24px;">
-                <i class="fas fa-code"></i>
-            </a></div></div>
-
-            <div class="parent" onclick="navigateTo('contact')">
-                <div class="child">
-            <a title="Contact" style="font-size: 24px;">
-                <i class="fas fa-envelope"></i>
-            </a></div></div>
-        </nav>
-
-        <!-- <div style= "border-top: 10px dotted #ffffff;"></div> -->
-    <section id="about-me">
-    <div class="total-about-me" style="text-align: center;">
-
-    <div class="about-me">
-    <h1 style="color: wheat; font-size: 50px;">About me</h1>
-    <div class="text-block">
-
-        <p style="color: white; font-weight: bold;">As a dedicated and results-driven software developer, I bring a strong foundation in programming and a passion for creating efficient and scalable solutions. I am well-versed in crafting visually appealing front-end interfaces using HTML, CSS and Javascript with a keen eye for design principles.
-            
-            Proficient in Python, I leverage its power to build robust and dynamic web applications, often utilizing the Flask framework. This experience allows me to develop scalable solutions while staying current with industry trends and best practices.
-            
-            In addition to my web development skills, and my proficiency in SQL enables me to work with databases effectively.
-            
-            I am enthusiastic about contributing my skills to innovative projects and collaborating with like-minded professionals to push the boundaries of what technology can achieve. My adaptability, attention to detail, and commitment to continuous learning make me a valuable asset to any development team.
-            
-            I am eager to apply my technical skills and passion for coding to contribute to challenging projects and drive success in a dynamic and collaborative environment.
-            </p>
+<section id="education" class="container mt-5">
+    <h1 class="text-center text-light">Education</h1>
+    <div class="row flex-row">
+        <div class="col-md-6">
+            <div class="hover-element text-center" style="width: 250px;" data-details="GPA: 9.0, School: Jubilee English Medium School, Kolakaluru">10th</div>
         </div>
+        <div class="col-md-6">
+            <div class="hover-element text-center" style="width: 250px;" data-details="Marks: 92.4%, College: Sri Chaitanya Junior College, Tenali">12th</div>
         </div>
     </div>
-    </section><br>
-
-    <section id="education">
-
-    <h1 style="text-align: center; color: wheat; font-size: 50px;">Education</h1>
-
-        <div class="centering">
-            <div class="hover-element" data-details="GPA: 9.0, School: Jubilee English Medium School, Kolakaluru">10th</div>
-            <div class="hover-element" data-details="Marks: 92.4%, College: Sri Chaitanya Junior College, Tenali">12th</div>
-            <div class="hover-element" data-details="CGPA: 8.1, College: Vignan's Lara Institute of Technology and Science, Branch: Electrical and Electronics Engineering, Vadlamudi">Graduation</div>
-            <div class="hover-element" data-details="College: IIIT Hyderabad, Branch: Master of Science in Information Technology">At present</div>
+    <div class="row flex-row mt-3">
+        <div class="col-md-6">
+            <div class="hover-element text-center" style="width: 250px;" data-details="CGPA: 8.1, College: Vignan's Lara Institute of Technology and Science, Branch: Electrical and Electronics Engineering, Vadlamudi">B.Tech</div>
         </div>
-        <br>
-        <br>
-    </section>
-    
-    <section id="skills">
-    <h1 style="text-align: center; color: wheat; font-size: 50px;">Skills</h1>
-
-    <div class="image-box">
-        <div class="logo-item">
-            <div class="logo-name">PYTHON</div>
+        <div class="col-md-6">
+            <div class="hover-element text-center" style="width: 250px;" data-details="College: IIIT Hyderabad, Branch: Master of Science in Information Technology">At Present</div>
         </div>
-        <div class="logo-item">
-            <div class="logo-name">HTML</div>
-        </div>
-        <div class="logo-item">
-            <div class="logo-name">CSS</div>
-        </div>
-        <div class="logo-item">
-            <div class="logo-name">FLASK</div>
-        </div>
-        <div class="logo-item">
-            <div class="logo-name">JAVASCRIPT</div>
-        </div>
-        <div class="logo-item">
-            <div class="logo-name">SQL</div>
-        </div>
-    </div>
-    
     </div>
 </section>
-<br>
 
 
-<!-- <div style= "border-top: 3px dotted #ffffff;"></div> -->
-        
-    <section id="contact">
-        <div class="centering">
+
+<section id="skills" class="container mt-5">
+    <h1 class="text-center text-light">Skills</h1>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="logo-name text-center">PYTHON</div>
+        </div>
+        <div class="col-md-2">
+            <div class="logo-name text-center">HTML</div>
+        </div>
+        <div class="col-md-2">
+            <div class="logo-name text-center">CSS</div>
+        </div>
+        <div class="col-md-2">
+            <div class="logo-name text-center">FLASK</div>
+        </div>
+        <div class="col-md-2">
+            <div class="logo-name text-center">JAVASCRIPT</div>
+        </div>
+        <div class="col-md-2">
+            <div class="logo-name text-center">SQL</div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container mt-5">
+    <div class="centering">
         <ul>
             <li class="item">
                 <a href="https://www.github.com/gowtham1035" target="_blank">
@@ -140,17 +115,19 @@
                 </a>
             </li>
             <li class="item">
-              <a href="https://www.linkedin.com/in/gowtham135/" target="_blank">
-                <i class="fa-brands fa-linkedin icon"></i>
-              </a>
+                <a href="https://www.linkedin.com/in/gowtham135/" target="_blank">
+                    <i class="fa-brands fa-linkedin icon"></i>
+                </a>
             </li>
-          </ul>
-        </div>
-        <p style="color: rgb(12, 172, 247); text-align: center;">gowthamneelam1@msitprogram.net</p>
-        <div class="viewer-count" id="viewerCount">
-    <i class="fas fa-eye"></i>
-    <span id="visitorCount"></span>
-</div>
-    </section> 
-    </body>
+            <li class="item">
+                <a href="https://www.instagram.com/gowtham.259/" target="_blank">
+                    <i class="fa-brands fa-instagram icon"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p style="color: rgb(0, 240, 148);">gowthamneelam1@msitprogram.net</p>
+</section>
+
+</body>
 </html>
