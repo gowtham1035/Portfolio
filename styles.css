@@ -182,8 +182,8 @@ ul {
 .container {
     /* background-color: white; */
     text-align: center;
-    height:410px;
-    width: 350px;
+    height: fit-content;
+    width: fit-content;
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 50px;
